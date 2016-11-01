@@ -21,5 +21,3 @@ class RecipeSearchApiWrapper
   end
 
 end
-
-RecipeSearchApiWrapper.search('pita')
