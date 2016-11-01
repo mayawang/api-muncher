@@ -19,5 +19,4 @@ class RecipeSearchApiWrapper
     end
     return recipes
   end
-
 end
