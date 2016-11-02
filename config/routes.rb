@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'homepages#index'
 
+  get 'search' => 'homepages#search', as: 'get_search'
   post 'search' => 'homepages#search', as: 'search'
 end

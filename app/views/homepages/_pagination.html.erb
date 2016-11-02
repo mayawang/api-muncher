@@ -1,0 +1,9 @@
+<% last_page = @page + 3 %>
+<% if @count == 0 %>
+<%    last_page = @page %>
+<% end %>
+
+
+<% for i in ([@page-5, 1].max)...last_page %>
+  <%= link_to "#{i} |", get_search_path(:page => i, :term => term) %>
+<% end %>
