@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   get 'search' => 'homepages#search', as: 'get_search'
   post 'search' => 'homepages#search', as: 'search'
+  get 'show' => 'homepages#show', as: 'show'
 end

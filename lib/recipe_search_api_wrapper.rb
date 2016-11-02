@@ -32,7 +32,25 @@ class RecipeSearchApiWrapper
     return {
       :recipes => recipes,
       :count => response['count'],
-      :more => response['more'],
+      :more => response['more']
     }
   end
+
+  def self.find(r)
+    encoded_url = URI.encode_www_form_component(r)
+    url = BASE_URL + "/search?" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEY}" + "&r=#{encoded_url}"
+
+    puts url
+
+    response = HTTParty.get(url)
+    if response == nil
+      return nil
+    end
+
+    hit = response[0]
+    recipe = Recipe.new(hit)
+    return recipe
+
+  end
+
 end

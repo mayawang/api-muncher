@@ -1,0 +1,5 @@
+<h2><%= @recipe.label %></h2>
+<%= image_tag "#{@recipe.image}", :class=>'recipe_photo' %>
+<p><%= @recipe.ingredients %></p>
+<p><%= @recipe.dietLabels %></p>
+<p><%= link_to "Learn More", @recipe.url %></p>

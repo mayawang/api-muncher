@@ -2,7 +2,7 @@
 <% @recipes.each do |recipe| %>
   <h4><%= recipe.label %></h4>
   <%= image_tag "#{recipe.image}", :class=>'recipe_photo' %>
-  <p><%= link_to "Details", recipe.url %></p>
+  <p><%= link_to "Details", show_path(:uri => recipe.uri) %></p>
 <% end %>
 
 <%= render :partial => 'pagination', :locals => {
