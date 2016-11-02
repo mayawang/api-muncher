@@ -12,4 +12,14 @@ class HomepagesController < ApplicationController
     @more = results[:more]
     # puts "#{} #{results[:more]}"
   end
+
+  def show
+    @recipe_id= params[:uri]
+    @recipe = RecipeSearchApiWrapper.find(@recipe_id)
+    @ingredients = @recipe.ingredients
+
+
+
+    @dietLabels = @recipe.dietLabels
+  end
 end

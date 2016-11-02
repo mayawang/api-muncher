@@ -1,0 +1,25 @@
+<h2><%= @recipe.label %></h2>
+<%= image_tag "#{@recipe.image}", :class=>'recipe_photo' %>
+
+<% if @dietLabels != [] %>
+  <% @dietLabels.each do |label| %>
+    <span class="label"><%= label %></span>
+  <% end %>
+<% end %>
+
+<table>
+<tr>
+   <th>Ingredients</th>
+   <th>Quantity</th>
+   <th>Measure</th>
+   <th>Weight</th>
+ </tr>
+<% @ingredients.each do |row| %>
+  <tr><% row.values.each do |value| %>
+    <td><%= value %></td>
+  <% end %></tr>
+<% end %>
+</table>
+
+
+<p><%= link_to "Learn More", @recipe.url %></p>

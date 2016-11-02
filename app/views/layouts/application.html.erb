@@ -8,7 +8,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+    <%= link_to "HOME", root_path %>
+  </header>
+  
   <body>
     <%= yield %>
   </body>
+
+  <footer>
+    <p>Powered by <img src="https://www.edamam.com/images/logo-site-header.png"></p>
+  </footer>
 </html>
