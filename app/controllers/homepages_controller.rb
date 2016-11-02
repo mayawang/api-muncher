@@ -10,6 +10,6 @@ class HomepagesController < ApplicationController
     @recipes = results[:recipes]
     @count = results[:count]
     @more = results[:more]
-    puts "#{} #{results[:more]}"
+    # puts "#{} #{results[:more]}"
   end
 end
