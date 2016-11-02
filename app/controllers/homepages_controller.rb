@@ -17,6 +17,9 @@ class HomepagesController < ApplicationController
     @recipe_id= params[:uri]
     @recipe = RecipeSearchApiWrapper.find(@recipe_id)
     @ingredients = @recipe.ingredients
+
+
+
     @dietLabels = @recipe.dietLabels
   end
 end
