@@ -1,8 +1,14 @@
 <h2><%= @recipe.label %></h2>
 <%= image_tag "#{@recipe.image}", :class=>'recipe_photo' %>
 
-<% if @dietLabels != [] %>
-  <% @dietLabels.each do |label| %>
+<% if @diet_labels != [] %>
+  <% @diet_labels.each do |label| %>
+    <span class="alert label"><%= label %></span>
+  <% end %>
+<% end %>
+
+<% if @health_labels != [] %>
+  <% @health_labels.each do |label| %>
     <span class="label"><%= label %></span>
   <% end %>
 <% end %>
