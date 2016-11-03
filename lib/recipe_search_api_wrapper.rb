@@ -12,7 +12,7 @@ class RecipeSearchApiWrapper
   APP_KEY = "3e974f32b9b7c425a0a6e4bae6e5e131"
   PAGE_SIZE = 10
 
-  def self.search(term, page)
+  def self.search(term, page, health_labels, diet_labels)
     page ||= 1
     page = page.to_i
 
@@ -21,6 +21,14 @@ class RecipeSearchApiWrapper
 
 
     url = BASE_URL + "/search?" + "q=#{term}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEY}" + "&from=#{from}&to=#{to}"
+
+    health_labels.each do |health_label|
+      url += "&Health=#{health_label}"
+    end
+
+    diet_labels.each do |diet_label|
+      url += "&Diet=#{diet_label}"
+    end
 
     response = HTTParty.get(url)
 
@@ -50,6 +58,18 @@ class RecipeSearchApiWrapper
     hit = response[0]
     recipe = Recipe.new(hit)
     return recipe
+
+  end
+
+  # value is a boolean
+  def self.is_peanut_free(value)
+    # if true, return all results that contains "peanut free" in healthlabels hash
+    if value
+
+
+    # if false, return nil
+    else
+    end
 
   end
 
