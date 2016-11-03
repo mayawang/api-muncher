@@ -23,17 +23,17 @@ class RecipeSearchApiWrapper
     url = BASE_URL + "/search?" + "q=#{term}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEY}" + "&from=#{from}&to=#{to}"
 
     health_labels.each do |health_label|
-      url += "&Health=#{health_label}"
+      url += "&health=#{health_label}"
     end
 
     diet_labels.each do |diet_label|
-      url += "&Diet=#{diet_label}"
+      url += "&diet=#{diet_label}"
     end
 
     response = HTTParty.get(url)
 
     recipes = []
-    hits = response['hits']
+    hits = response['hits'] || []
     hits.each do |hit|
       recipes << Recipe.new(hit['recipe'])
     end
