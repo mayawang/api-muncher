@@ -1,7 +1,7 @@
 <h1>Search Result</h1>
 <% @recipes.each do |recipe| %>
   <h4><%= recipe.label %></h4>
-  <%= image_tag "#{recipe.image}", :class=>'recipe_photo' %>
+  <%= link_to image_tag(recipe.image, :class=>'recipe_photo'), show_path(:uri => recipe.uri) %>
   <p><%= link_to "Details", show_path(:uri => recipe.uri) %></p>
 <% end %>
 
