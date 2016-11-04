@@ -1,9 +1,14 @@
-<% last_page = @page + 3 %>
-<% if @count == 0 %>
-<%    last_page = @page %>
-<% end %>
+<%# last_page = @page + 5 %>
+<%# if @count == 0 %>
+<%#    last_page = @page %>
+<%# end %>
 
 
-<% for i in ([@page-5, 1].max)...last_page %>
-  <%= link_to "#{i} |", get_search_path(:page => i, :term => term) %>
-<% end %>
+<%# for i in 1..last_page %>
+<!-- disabled logic for +5 and -5 page in preparation for search results more than 100 -->
+
+<ul class="pagination  text-center" role="navigation" aria-label="Pagination">
+  <% for i in 1..10 %>
+    <li><%= link_to "#{i}", get_search_path(:page => i, :term => term) %></a></li>
+  <% end %>
+</ul>
