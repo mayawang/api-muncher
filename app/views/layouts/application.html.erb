@@ -4,19 +4,21 @@
     <title>ApiMuncher</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
   </head>
 
-  <header>
-    <%= link_to "HOME", root_path %>
+  <header class="header_box">
+    <h1><%= link_to "Muncher", root_path, :class => "header_text" %></h1>
+
   </header>
-  
+
   <body>
     <%= yield %>
   </body>
 
-  <footer>
+  <footer class="footer">
     <p>Powered by <img src="https://www.edamam.com/images/logo-site-header.png"></p>
   </footer>
 </html>

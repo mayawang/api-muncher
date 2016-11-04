@@ -10,7 +10,7 @@ class RecipeSearchApiWrapper
   BASE_URL = "https://api.edamam.com"
   APP_ID = "f8c6af19"
   APP_KEY = "3e974f32b9b7c425a0a6e4bae6e5e131"
-  PAGE_SIZE = 10
+  PAGE_SIZE = 9
 
   def self.search(term, page, health_labels, diet_labels)
     page ||= 1

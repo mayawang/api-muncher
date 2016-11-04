@@ -29,4 +29,11 @@
 
 
 <p><%= link_to "Learn More", @recipe.url %></p>
-<p><%= link_to "Back to List", search_path, :class => 'button' %></p>
+
+<button onclick="goBack()" class="button">Go Back</button>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>

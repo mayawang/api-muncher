@@ -14,3 +14,36 @@
  *= require_self
  */
 @import url('foundation.css');
+
+/*===========header & footer=============*/
+.header_box{
+  border-bottom: 1px solid lightgrey;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.header_text{
+  font-family:"Dancing Script";
+  font-weight: bold;
+}
+
+.footer{
+  text-align: right;
+}
+
+/*===========Index Page=============*/
+
+.search_bar{
+  position:relative;
+  left: 30%;
+}
+
+.search_button{
+  width: 10%;
+  
+}
+
+/*===========Search(Result) Page=============*/
+
+
+/*===========Show Page=============*/
