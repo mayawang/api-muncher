@@ -14,11 +14,11 @@
 
   </header>
 
-  <body>
+  <body class="body">
     <%= yield %>
   </body>
 
   <footer class="footer">
-    <p>Powered by <img src="https://www.edamam.com/images/logo-site-header.png"></p>
+  Powered By <%= link_to image_tag("https://www.edamam.com/images/logo-site-header.png"), "https://developer.edamam.com/" %>
   </footer>
 </html>

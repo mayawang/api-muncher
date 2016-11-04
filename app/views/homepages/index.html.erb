@@ -1,7 +1,7 @@
 <%= form_tag search_path, method: "post" do %>
 
   <div  class="search_bar">
-    <div class="large-4 columns">
+    <div class="small-6 medium-6 large-6 columns">
       <%= label_tag "find your recipe" %>
       <%= text_field_tag :term %>
     </div>
@@ -11,6 +11,7 @@
     <%= submit_tag "Search", :class => "button" %>
 </div>
 
+<div class="small-12 medium-12 large-12 columns">
   <p><%= label_tag "Peanut Free" %>
   <%= check_box_tag :is_peanut_free %></p>
 
@@ -19,6 +20,7 @@
 
   <p><%= label_tag "Gluten Free" %>
   <%= check_box_tag :is_gluten_free %></p>
+</div>
 
 
 <% end %>

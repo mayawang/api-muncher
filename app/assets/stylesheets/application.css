@@ -20,11 +20,16 @@
   border-bottom: 1px solid lightgrey;
   text-align: center;
   opacity: 0.9;
+  /*background-color: black;*/
 }
 
 .header_text{
   font-family:"Dancing Script";
   font-weight: bold;
+}
+
+.body{
+  background-image: url();
 }
 
 .footer{
@@ -34,13 +39,16 @@
 /*===========Index Page=============*/
 
 .search_bar{
+  margin-top: 10%;
   position:relative;
-  left: 30%;
+  left: 20%;
 }
 
 .search_button{
   width: 10%;
-  
+  position: relative;
+  top: -3.5rem;
+  left: 70%;
 }
 
 /*===========Search(Result) Page=============*/
