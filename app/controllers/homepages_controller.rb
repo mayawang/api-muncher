@@ -1,3 +1,4 @@
+require 'recipe_search_api_wrapper'
 class HomepagesController < ApplicationController
   def index
   end
