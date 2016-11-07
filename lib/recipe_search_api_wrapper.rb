@@ -61,16 +61,4 @@ class RecipeSearchApiWrapper
 
   end
 
-  # value is a boolean
-  def self.is_peanut_free(value)
-    # if true, return all results that contains "peanut free" in healthlabels hash
-    if value
-
-
-    # if false, return nil
-    else
-    end
-
-  end
-
 end

@@ -13,16 +13,19 @@
   </div>
 
 
-  <div class="small-12 medium-12 large-12 columns">
-    <p><%= label_tag "Peanut Free" %>
-    <%= check_box_tag :is_peanut_free %></p>
+    <div class="small-12 medium-12 large-12 columns">
+      <section class="check_boxes">
+      <label class="check_label"> Peanut Free <%= check_box_tag :is_peanut_free %></label>
 
-    <p><%= label_tag "High Protein" %>
-    <%= check_box_tag :is_high_protein %></p>
+      <label class="check_label"> Low Carb <%= check_box_tag :is_low_carb %></label>
 
-    <p><%= label_tag "Gluten Free" %>
-    <%= check_box_tag :is_gluten_free %></p>
-  </div>
+      <label class="check_label"> High Protein <%= check_box_tag :is_high_protein %></label>
+
+      <label class="check_label"> Vegetarian <%= check_box_tag :is_vegetarian %></label>
+
+      <label class="check_label"> Low Fat <%= check_box_tag :is_low_fat %></label>
+      </section>
+    </div>
 
   <% end %>
 </body>
