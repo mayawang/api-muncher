@@ -1,6 +1,6 @@
 Heroku Live: https://otter-muncher.herokuapp.com/
 
-# Reflection"
+# Reflection
 
 - What do you understand better after doing this project?
 	- I learnt more about applying API to website, especially understanding on query parameters, and how this connects to our previous learning of model and database.
