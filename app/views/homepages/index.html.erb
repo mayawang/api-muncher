@@ -1,26 +1,28 @@
-<%= form_tag search_path, method: "post" do %>
+<body class="home_body">
+  <%= form_tag search_path, method: "post" do %>
 
-  <div  class="search_bar">
-    <div class="small-6 medium-6 large-6 columns">
-      <%= label_tag "find your recipe" %>
-      <%= text_field_tag :term %>
+    <div  class="search_bar">
+      <div class="small-6 medium-6 large-6 columns">
+        <p class="search_label">- Find A Recipe -</p>
+        <%= text_field_tag :term %>
+      </div>
     </div>
+
+  <div class="search_button">
+      <%= submit_tag "Search", :class => "button" %>
   </div>
 
-<div class="search_button">
-    <%= submit_tag "Search", :class => "button" %>
-</div>
 
-<div class="small-12 medium-12 large-12 columns">
-  <p><%= label_tag "Peanut Free" %>
-  <%= check_box_tag :is_peanut_free %></p>
+  <div class="small-12 medium-12 large-12 columns">
+    <p><%= label_tag "Peanut Free" %>
+    <%= check_box_tag :is_peanut_free %></p>
 
-  <p><%= label_tag "High Protein" %>
-  <%= check_box_tag :is_high_protein %></p>
+    <p><%= label_tag "High Protein" %>
+    <%= check_box_tag :is_high_protein %></p>
 
-  <p><%= label_tag "Gluten Free" %>
-  <%= check_box_tag :is_gluten_free %></p>
-</div>
+    <p><%= label_tag "Gluten Free" %>
+    <%= check_box_tag :is_gluten_free %></p>
+  </div>
 
-
-<% end %>
+  <% end %>
+</body>

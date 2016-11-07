@@ -17,41 +17,99 @@
 
 /*===========header & footer=============*/
 .header_box{
-  border-bottom: 1px solid lightgrey;
   text-align: center;
-  opacity: 0.9;
-  /*background-color: black;*/
+  opacity: 0.6;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: white;
 }
 
 .header_text{
   font-family:"Dancing Script";
   font-weight: bold;
+  color: #E15554;
 }
 
-.body{
-  background-image: url();
+.sub_header{
+  font-family:"PT Sans";
+  font-weight: bold;
 }
 
 .footer{
   text-align: right;
+  font-family: "PT Sans";
+  font-size: 1.2rem;
+  color: grey;
+  margin-right: 3%;
 }
-
+.api_logo{
+  width: 6%;
+  height: 4%;
+}
 /*===========Index Page=============*/
 
+.home_body{
+  background-color: white;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/26/ba/c3/26bac33e1f8d5105db0000cef734fec3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search_label{
+  font-family: "Anton";
+  font-size: 3rem;
+  color: #E15554;
+  margin-left: 28%;
+  margin-bottom: 10%;
+  text-transform:uppercase;
+}
 .search_bar{
-  margin-top: 10%;
+  margin-top: 5%;
   position:relative;
-  left: 20%;
+  left: 25%;
+  opacity: 0.8;
 }
 
 .search_button{
   width: 10%;
   position: relative;
   top: -3.5rem;
-  left: 70%;
+  left: 75%;
+  opacity: 0.8;
 }
 
 /*===========Search(Result) Page=============*/
 
+.page_body{
+  background-color: white;
+  margin-top: 5%;
+}
+.recipe_box{
+  box-shadow: 10px 10px 10px #888888;
+  background-color: white;
+  text-align: center;
+}
+.recipe_photo{
+  padding-top: 5%;
+}
 
 /*===========Show Page=============*/
+.recipe_title{
+  font-family: "Anton";
+  text-transform:uppercase;
+  color: #E15554;
+  text-align: center;
+}
+.show_photo{
+  width: 100%;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.label{
+  position:relative;;
+  left: 30%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
