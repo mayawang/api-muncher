@@ -16,7 +16,7 @@ Heroku Live: https://otter-muncher.herokuapp.com/
 
 
 - What do you want more practice with?
-	- I need to practice more on: api and controller tesing, try more complex foundation grid(e.g. 5 recipes in a row), try pagination gem, and try Google Auth next time.
+	- I need to practice more on: API and controller tesing, try more complex foundation grid(e.g. 5 recipes in a row), try pagination gem, and try Google Auth next time.
 	- Did not attempt Google OAuth and save favorite feature this time due to time constrain. I did briefly think about how to implement these features. 
 	    - Google OAuth: will be similar to Github OAuth. will be nice to go through it if has the opportunity.
 	    - Save favorites: create user and favorites model. model relation: User has many favorites. I can save and access user & favorites by sessions[user_id].
