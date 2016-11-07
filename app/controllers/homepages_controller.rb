@@ -11,13 +11,23 @@ class HomepagesController < ApplicationController
     if params[:is_peanut_free] == "1"
       @health_labels << "peanut-free"
     end
-    if params[:is_gluten_free] == "1"
-      @health_labels << "gluten-free"
+    if params[:is_vegetarian] == "1"
+      @health_labels << "vegetarian"
+    end
+
+    @diet_labels = []
+    if params[:is_low_carb] == "1"
+      @diet_labels << "low-carb"
     end
 
     @diet_labels = []
     if params[:is_high_protein] == "1"
-      @health_labels << "high-protein"
+      @diet_labels << "high-protein"
+    end
+
+    @diet_labels = []
+    if params[:is_low_fat] == "1"
+      @diet_labels << "low-fat"
     end
 
     results = RecipeSearchApiWrapper.search(@term, @page, @health_labels, @diet_labels)
